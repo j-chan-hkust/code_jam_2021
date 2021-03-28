@@ -45,7 +45,7 @@ def binarySortSolve(N):
                 solution.insert(midpoint, element)
                 break
             elif response == solution[midpoint-1]: #it's to the left
-                endpoint = midpoint
+                endpoint = midpoint     
                 continue
             elif response == solution[midpoint]:
                 startpoint = midpoint

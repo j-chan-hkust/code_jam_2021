@@ -18,8 +18,14 @@ def process_input(inputs):
                 elif i<=Cprime:
                     scores.append(i)
                     Cprime -= i
-            out = list(range(1,T+1))
-            print (scores)
+
+            out = ''
+            direction = True #left to right is true, right to left is false
+            for i in reversed(range(T)):
+                if scores[0] == i-1:
+                    out = ''+i
+                    direction = not(direction)
+                continue
         else:
             output.append("IMPOSSIBLE")
 
